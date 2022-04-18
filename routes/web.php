@@ -25,4 +25,8 @@ Route::get('/admin', function () {
     return view('admin.index');
 })->middleware(['auth', 'role:admin'])->name('admin.index');
 
+Route::get('/test', function () {
+    return view('sidebar');
+})->name('sidebar');
+
 require __DIR__.'/auth.php';

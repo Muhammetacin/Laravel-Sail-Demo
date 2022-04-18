@@ -16,6 +16,10 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
 
+                    <x-nav-link :href="route('sidebar')" :active="request()->routeIs('sidebar')">
+                        {{ __('Sidebar test') }}
+                    </x-nav-link>
+
                 @role('admin')
                     <x-nav-link :href="route('admin.index')" :active="request()->routeIs('admin.index')">
                         {{ __('Admin') }}
